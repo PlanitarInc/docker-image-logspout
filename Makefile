@@ -22,6 +22,6 @@ test:
 bin/logspout:
 	mkdir -p bin
 	docker run --rm -v `pwd`/bin:/out planitar/dev-go /bin/bash -lc ' \
-	  go get "github.com/progrium/logspout" && \
+	  go get "github.com/PlanitarInc/logspout" && \
 	  cp $$GOPATH/bin/logspout /out \
 	'
