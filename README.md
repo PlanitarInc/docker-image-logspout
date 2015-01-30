@@ -15,3 +15,10 @@ curl -H 'Accept: application/json' $(docker port `docker ps -lq` 8000)/logs
 docker run -v=/var/run/docker.sock:/tmp/docker.sock \
   planitar/logspout syslog://<IP>:<PORT>/
 ```
+
+### Forward to udp
+
+```sh
+docker run -v=/var/run/docker.sock:/tmp/docker.sock \
+  planitar/logspout udp+json://<IP>:<PORT>/
+```
