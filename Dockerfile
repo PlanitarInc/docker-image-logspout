@@ -8,5 +8,5 @@ VOLUME /mnt/routes
 
 EXPOSE 8000
 
-ENTRYPOINT ["/bin/logspout"]
+ENTRYPOINT ["/usr/bin/tini", "--", "/bin/logspout"]
 CMD []
